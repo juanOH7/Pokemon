@@ -55,6 +55,7 @@ Pokemon::Pokemon(const Pokemon& original){
 	for (int i = 0; i < 6; ++i){
 		stats[i] = original.stats[i];
 	}
+	stats[0] = 0;
 	moves = new Move*[4];
 	for (int i = 0; i < 4; ++i){
 		moves[i] = original.moves[i];
@@ -77,7 +78,7 @@ Pokemon::Pokemon(string name, int type ,int level): name(name), type(type) ,leve
 	stats = new double[6];
 	for (int i = 0; i < 6; ++i){
 		if (i == 0){
-			stats[i] = (((2 * basestats[i] + iv[i] + (ev[i]/4)) * level)/100) + level + 10;
+			stats[i] = 50;
 		}else{
 			stats[i] = (((2 * basestats[i] + iv[i] + (ev[i]/4)) * level)/100) + 5;
 		}

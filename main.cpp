@@ -223,12 +223,12 @@ void drawHP(int totHP, int& currHP, int totHP2, int& currHP2){
 	attron(COLOR_PAIR(1));
 	int desplasarHor = 3, desplasarVert = 2;
 	int desplasarVert2 = 34;
-	for (int j = 0; j < totHP + 2; ++j){
+	for (int j = 0; j < 52; ++j){
 		mvprintw(desplasarVert,(j+desplasarHor)," ");
 		mvprintw(desplasarVert + 1,(j+desplasarHor)," ");
 		mvprintw(desplasarVert + 2,(j+desplasarHor)," ");
 	}
-	for (int desplasarHor2 = 139, j = 0; j < totHP2 + 2; ++j, desplasarHor2--){
+	for (int desplasarHor2 = 139, j = 0; j < 52; ++j, desplasarHor2--){
 		mvprintw(desplasarVert2,(desplasarHor2)," ");
 		mvprintw(desplasarVert2 + 1,(desplasarHor2)," ");
 		mvprintw(desplasarVert2 + 2,(desplasarHor2)," ");
